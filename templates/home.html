@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="Maruthi.js"></script>
+<link rel="StyleSheet" href="{{url_for('static',filename='Maruthi.css')}}">
+<link rel = "icon" href = "{{url_for('static',filename='logo.png')}}" type = "image/x-icon">
+<title> Sri Maruthi Pharma</title> 
+</head>
+<body>
+    <div class="container"> 
+        <ul id="menu"> 
+        <li><a href="{{url_for('about')}}" >About Us</a></li> 
+        <li><a href="{{url_for('support')}}" >Contact Us</a></li>
+        <li><a href="#">Home</a></li> 
+        <div class="logo">    
+        <li><img src="{{url_for('static',filename='SMP Logo.png')}}" width="150px" height="150px" style="float: left;"></li>
+        </div>
+    </ul>
+    </div>
+
+<div class="background">
+<div class="slideshow-container">
+<div class="mySlides">
+  <q>We deliver the best care. A better way to shop for health & beauty</q>
+  
+</div>
+
+<div class="mySlides">
+  <q>It is easy to get a thousand prescriptions, but hard to get one single remedy.</q>
+  
+</div>
+
+<div class="mySlides">
+  <q>He who takes medicine and neglects diet wastes the skill of his doctors.</q>
+  
+</div>
+<div class="mySlides">
+    <q>Water, air, and cleanness are the chief articles in my pharmacy.</q>
+    
+  </div>
+  <div class="mySlides">
+    <q>Poisons and medicine are often the same substance given with different intents.</q>
+   
+  </div>
+  <div class="mySlides">
+    <q>If your going through hell then you are in pharmacy</q>
+    
+  </div>
+
+</div>
+
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+</div>
+<script>
+    var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+    </script>
+{%with messages=get_flashed_messages(with_categories=true)%}
+      {%if messages%}
+        {%for c,m in messages%}
+          <p class='flash'>{{m}}</p>
+        {%endfor%}
+      {%endif%}
+    {%endwith%}
+    
+    <div class="overview">
+      <h1>OverView</h1>
+      <p>
+        Sri Maruthi Pharma in Bangalore is one of the leading businesses in Surgical
+Equipment Dealers. Also known for Surgical Equipment Dealers, Pharmaceutical
+Product Distributors, Medical Equipment Dealers, Pharmaceutical Distributors,
+Surgical Item Dealers, Medicine Distributors, Medical Product Dealers, Generic
+Medicine Wholesalers and much more.
+      </p>
+    </br>
+    </br>
+    </div>
+    <div class="dealers">
+      <h1>We are dealers in....</h1>
+      </div>
+    </br>
+    <div class="imgs">
+    <div class="delimgr1">
+    <div class="img1">
+      <img src="{{url_for('static',filename='chemist.png')}}" width="390" height="400"style="border-radius:25px">
+      <span>Chemist</span>
+    </div>
+    <div class="img1">
+      <img src="{{url_for('static',filename='Surgicalins.jpg')}}" width="390" height="400"style="border-radius:25px">
+      <span>Surgical Instruments</span>
+    </div>
+    <div class="img1">
+      <img src="{{url_for('static',filename='pharmaceutical.jpg')}}" width="390" height="400"style="border-radius:25px">
+      <span>Pharmaceutical</span>
+    </div>
+    </div>
+    <div class="delimgr2">
+      <div class="img2">
+        <img src="{{url_for('static',filename='medicalequip2.jpg')}}" width="390" height="400"style="border-radius:25px">
+        <span>Medical Equipments Dealer</span>
+      </div>
+      <div class="img2">
+        <img src="{{url_for('static',filename='pharmadist.jpeg')}}" width="390" height="400"style="border-radius:25px">
+        <span>Pharmaceutical Distributors</span>
+      </div>
+      <div class="img2">
+        <img src="{{url_for('static',filename='pharmawholesale.jpg')}}" width="390" height="400" style="border-radius:25px">
+        <span>Pharmaceutical Wholesalers</span>
+      </div>
+    </div>
+
+    <div class="delimgr3">
+      <div class="img3">
+        <img src="{{url_for('static',filename='surgicalfm.jpg')}}" width="390" height="400" style="border-radius:25px">
+        <span>Surgical  Mask  Dealers</span>
+      </div>
+      <div class="img3">
+        <img src="{{url_for('static',filename='n95.jpg')}}" width="390" height="400" style="border-radius:25px">
+        <span>N-95 Mask Dealers </span>
+      </div>
+      <div class="img3">
+        <img src="{{url_for('static',filename='ppmanuf.jpeg')}}" width="390" height="400" style="border-radius:25px">
+        <span>Pharma Product Manufacturers</span>
+      </div>
+    </div>
+
+    <div class="delimgr4">
+      <div class="img4">
+        <img src="{{url_for('static',filename='genmed.jpg')}}" width="390" height="400" style="border-radius:25px">
+        <span>Generic Medicine Distributors</span>
+      </div>
+      <div class="img4">
+        <img src="{{url_for('static',filename='meddistri.png')}}" width="390" height="400" style="border-radius:25px">
+        <span>Medicine Distributors</span>
+      </div>
+      <div class="img4">
+        <img src="{{url_for('static',filename='pharmadist.jpeg')}}" width="390" height="400" style="border-radius:25px">
+        <span>Pharma Product Wholesalers</span>
+      </div>
+    </div>
+    </div>
+    
+
+    
+<DIV class="whatsapp-icon">
+    <a
+        href="https://wa.me/2348100000000"
+        class="whatsapp_float"
+        target="_blank"
+        rel="noopener noreferrer">
+        <i class="fa fa-whatsapp whatsapp-icon"></i>
+      </a>
+
+</DIV>
+</section>
+<footer id="footer">
+    <div class="f-content">
+        <img src="{{url_for('static',filename='logo.png')}}" width="150px" height="150px">
+        <br>
+        <a href="mailto:sreemaruthipharma@gmail.com">sriMaruthipharma@gmail.com</a>
+        <br>
+
+        <div class="footer-icons">
+
+            <a href="#"><img src="{{url_for('static',filename='fb.png')}}"></a>
+            <a href="#"><img src="{{url_for('static',filename='twitter.png')}}"></a>
+            <a href="#"><img src="{{url_for('static',filename='insta.png')}}"></a>
+            <a href="#"><img src="{{url_for('static',filename='linkedin_40px.png')}}"></a>
+
+        </div>
+    </div>
+    </footer>
+
+  </section>
+
+
+</body>
+</html> 

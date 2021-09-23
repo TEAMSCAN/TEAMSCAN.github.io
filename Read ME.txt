@@ -1,0 +1,28 @@
+REQUIREMENTS-VSCODE,PYTHON
+1.extract the folder. 
+2.delete site and python cache from that folder.
+3.open command prompt.
+4.open the path of the extracted folder in command prompt.[ex:E:\>CD SCAN ,here scan is the folder stored in E drive]
+// to install flask type the code from step5-8
+5.pip install flask
+6.pip install Flask-SQLAlchemy
+7.pip install Flask-WTF
+8.pip install email_validator
+9.type python to implement python in command prompt
+//type the following codes from 10-13 to import the necessary directories.
+10.from pharmacy import db
+11.from pharmacy import Requestlist
+12.db.create_all()
+13.Requestlist.query.all()  //you will get a square bracket.
+14.ctrl z -enter.
+
+15.then type >>>python pharmacy.py   //and then while it executes open browser .
+16.localhost:5000    //type this in the url block.
+17.to stop the execution -ctrl c in command prompt.
+
+while the web page is opened if you wish to open the admin block then type 18 point in the url
+Admin page:
+18.localhost5000/order
+// after the admin page opens enter the password
+19.password -maruthi000.
+the tabulated view of the data stored in the contact us page will be displayed. 

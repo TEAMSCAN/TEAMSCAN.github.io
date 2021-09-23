@@ -1,0 +1,337 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;500&family=Dosis:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bree+Serif&display=swap');
+* 
+{box-sizing: border-box}
+body
+ {font-family: Verdana, sans-serif;
+   margin:0;
+  
+ }
+
+.slideshow-container {
+  margin-top: 150px;
+  position: relative;
+  width:auto;
+  height: 50%;
+  margin-left: 15%;
+  margin-right: 15%;
+  
+}
+.background
+{
+  width:100%;
+  position: relative;
+  background-image: url("bckgrnd.jpg");
+  
+}
+
+
+.mySlides {
+  padding: 80px;
+  text-align: center;
+ 
+}
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    width:auto;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+q {font-style: italic;
+font-size: 1.2em;
+color: azure;}
+
+.overview
+{
+  margin-left: 7%;
+  margin-right: 7%;
+  width :auto;
+}
+.overview h1{
+  font-family: 'DM Serif Display', serif;
+  font-size: 30px;
+
+}
+.overview p{
+  font-family: 'Dosis', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  word-spacing: 4px;
+  
+}
+.dealers
+{
+  margin-left: 7%;
+  margin-right: 7%;
+  width :auto;
+}
+.dealers h1{
+  font-family: 'DM Serif Display', serif;
+  font-size: 30px;
+
+}
+.delimgr1{
+  display: inline-flex;
+  margin-left: 7%;
+  margin-right: 7%;
+  width :auto;
+  
+}
+.img1,.img2,.img3{
+  margin:20px;
+  margin-bottom: 40px;
+}
+.delimgr2{
+  display: inline-flex;
+  margin-left: 7%;
+  margin-right: 7%;
+  width :auto;
+  
+}
+.img4,.img5,.img6{
+  margin:20px;
+  margin-bottom: 40px;
+}
+.delimgr3{
+  display: inline-flex;
+  margin-left: 7%;
+  margin-right: 7%;
+  width :auto;
+  
+}
+.img7,.img8,.img9{
+  margin:20px;
+  margin-bottom: 40px;
+}
+.delimgr4{
+  display: inline-flex;
+  margin-left: 7%;
+  margin-right: 7%;
+  width :auto;
+  padding-bottom: 20px;
+  
+}
+.img10,.img11,.img12{
+  margin:20px;
+  margin-bottom: 40px;
+}
+.delimgr1,.delimgr2,.delimgr3,.delimgr4
+{
+  flex-wrap: wrap;
+}
+span {
+	margin-left: 1em;
+	color: #aaa;
+	font-size: 40px;
+  font-family: 'Acme', sans-serif;
+}
+img:hover+span {
+	bottom: -45px;
+	opacity: 1;
+}
+span {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 300px;
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font-size: 18px;
+	text-decoration:underline;
+	text-align:50px;
+  
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+
+.delimgr1 .img1 {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.delimgr1 .img1:hover img {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.delimgr2 .img2 {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.delimgr2 .img2:hover img {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.delimgr3 .img3 {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.delimgr3 .img3:hover img {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.delimgr4 .img4 {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.delimgr4 .img4:hover img {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.whatsapp_float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    background-image: url("whatsapp_50px.png");
+    background-position: 53%;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+
+.whatsapp-icon {
+    margin-top: 16px;
+   
+}
+
+.flash{
+  text-align: center;
+  color: steelblue;
+}
+
+.container{
+  
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  
+}
+
+ul { 
+    list-style-type: none;
+    margin: 0;
+    height:150px;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+  }
+  .logo li{
+    float:left;
+    margin-left:5%;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    
+    text-align: bottom;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-top: 120px;
+    font-size: 20px;
+    font-family: 'Bree Serif', serif;
+    text-decoration: none;
+  }
+  
+  
+  li a:hover {
+    background-color: lightsalmon;
+  }
+  :li a:active {
+    background-color: #04AA6D;
+  }
+  #footer {
+    display: flex;
+    background-color:rgb(0, 0, 0);
+    height:400px;
+    margin:0px;
+    width:100%;
+  }
+  .f-content{
+    flex:2;
+    order:1;
+    font-size:35px;
+    margin-left:20px;
+    text-align: left;
+    text-decoration: none;
+    color:#ddd;
+    padding:20px;
+    padding-top:30px;
+  }
+  .f-content a{
+    font-size:20px;
+    color:inherit;
+    text-decoration: none;
+  }
+  .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+    padding:1px;
+    margin-top:15px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+  
+  .footer-right{
+    flex:1;
+    order:2;
+    margin-left:20px;
+    text-align: left;
+    font-size: 20px;
+    display:block;
+  
+  }

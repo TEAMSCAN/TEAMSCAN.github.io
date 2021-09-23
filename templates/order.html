@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel = "icon" href = "{{url_for('static',filename='logo.png')}}" type = "image/x-icon">
+	<title>Sri Maruthi Pharma | Admin</title>
+</head>
+	<style type="text/css">
+		div{
+			width: 100%;
+			margin-top: 5%;
+			text-align: center;
+		}
+		table{
+			width: 100%;
+			background: white;
+			margin-bottom: 20px;
+		}
+		span{
+			margin-right: 5%;
+		}
+
+		body{
+			background: url('https://img4.goodfon.com/wallpaper/nbig/b/de/pharmacy-pills-white-medicine.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		a{
+			text-decoration: none;
+
+			color: black;
+		}
+		button{
+			margin-top: 20px;
+		}
+	</style>
+<body>
+
+	<div>
+		<form class="" action="" method="post">
+			<p>Enter Admin Key</p>
+			<input type="password" name="password">
+			<br>
+			<button>Submit</button>
+		</form>
+		
+	</div>
+{%if data!=0%}
+	<div>
+		<table border="1">
+			<thead>
+				<td>ID</td>
+				<td>Date</td>
+				<td>Name</td>
+				<td>Mobile No</td>
+				<td>Email</td>
+				<td>Request</td>
+			</thead>
+			{%for i in data%}
+				<tr class='row'>
+					<td class= "clean">{{i}}</td>
+				</tr>
+			{%endfor%}
+		</table>
+		<a href="{{url_for('home')}}">Exit</a>
+	</div>
+{%endif%}
+
+<script type="text/javascript">
+
+	td=document.querySelectorAll('.clean')
+	row=document.querySelectorAll('.row')
+	for(i=0;i<td.length;i++)
+	{
+		text=td[i].innerHTML.split('^')
+		row[i].innerHTML=`<td>${text[0]}</td>
+				<td>${text[1]}</td>
+				<td>${text[2]}</td>
+				<td>${text[3]}</td>
+				<td>${text[4]}</td>
+				<td>${text[5]}</td>`
+	}
+
+
+
+</script>
+</body>
+</html>
+
